@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="shoesStylesheet.css" />
+		<title>Vite App</title>
+	</head>
+	<body>
+		<div id="app">
+			<h1 class="font-medium">Shoes Table</h1>
+
+			<!-- start of table code -->
+			<div class="table-wrapper margin-top">
+				<table>
+					<tr>
+						<th>length</th>
+						<th>size</th>
+						<th>width size B or C</th>
+						<th>width size D</th>
+						<th>width size EE or EEE</th>
+					</tr>
+
+					<tr class="hover">
+						<td data-cell="length">11 15/16</td>
+						<td data-cell="size">12</td>
+						<td data-cell="width size B or C">3 14/16</td>
+						<td data-cell="width size D">4 14/16</td>
+						<td data-cell="width size EE or EEE">4 10/16</td>
+					</tr>
+					<tr class="hover">
+						<td data-cell="length">11 11/16</td>
+						<td data-cell="size">13</td>
+						<td data-cell="width size B or C">4</td>
+						<td data-cell="width size D">4 6/16</td>
+						<td data-cell="width size EE or EEE">4 12/16</td>
+					</tr>
+					<tr class="hover">
+						<td data-cell="length">12</td>
+						<td data-cell="size">14</td>
+						<td data-cell="width size B or C">4 2/16</td>
+						<td data-cell="width size D">4 8/16</td>
+						<td data-cell="width size EE or EEE">4 14/16</td>
+					</tr>
+					<tr class="hover">
+						<td data-cell="length">12 15/16</td>
+						<td data-cell="size">15</td>
+						<td data-cell="width size B or C">4 4/16</td>
+						<td data-cell="width size D">4 10/16</td>
+						<td data-cell="width size EE or EEE">5 2/16</td>
+					</tr>
+					<tr class="hover">
+						<td data-cell="length">13</td>
+						<td data-cell="size">17</td>
+						<td data-cell="width size B or C">4 8/16</td>
+						<td data-cell="width size D">4 14/16</td>
+						<td data-cell="width size EE or EEE">5 4/16</td>
+					</tr>
+					<tr class="hover">
+						<td data-cell="length">13 5/16</td>
+						<td data-cell="size">18</td>
+						<td data-cell="width size B or C">4 10/16</td>
+						<td data-cell="width size D">5</td>
+						<td data-cell="width size EE or EEE">5 6/16</td>
+					</tr>
+					<tr class="hover">
+						<td data-cell="length">13 11/16</td>
+						<td data-cell="size">19</td>
+						<td data-cell="width size B or C">4 12/16</td>
+						<td data-cell="width size D">5 2/16</td>
+						<td data-cell="width size EE or EEE">5 18/16</td>
+					</tr>
+					<tr class="hover">
+						<td data-cell="length">14</td>
+						<td data-cell="size">20</td>
+						<td data-cell="width size B or C">4 14/16</td>
+						<td data-cell="width size D">5 14/16</td>
+						<td data-cell="width size EE or EEE">5 10/16</td>
+					</tr>
+				</table>
+			</div>
+			<!-- end of table code -->
+
+			<!-- start of form code -->
+			<h1 class="margin-top">Survey Form</h1>
+
+			<div class="form-wrapper">
+				<form id="myForm" action="#">
+					<div class="form-group">
+						<label>Phone number</label>
+
+						<input
+							type="text"
+							placeholder="09853333345567"
+							name="phone number"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label>Name</label>
+
+						<input type="text" name="name" />
+					</div>
+
+					<div class="form-group">
+						<label for="selectInput">Show purchased</label>
+
+						<select id="selectInput">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="rangeInput">Rate Our Service:</label>
+						<span>1</span>
+						<input
+							type="range"
+							id="rangeInput"
+							name="rangeInput"
+							min="1"
+							max="10"
+						/>
+						<span>10</span>
+					</div>
+
+					<div class="form-group">
+						<label for="comments">Comment</label>
+
+						<textarea id="comments"></textarea>
+					</div>
+
+					<div class="form-group">
+						<label for="calendarInput">Visit date:</label>
+						<input type="date" id="calendarInput" name="calendarInput" />
+					</div>
+
+					<div class="time-of-day">
+						<label>Time of Day</label>
+						<label>
+							<input type="radio" name="time of day" value="Early" /> Early
+						</label>
+
+						<label>
+							<input type="radio" name="time of day" value="Midday" /> Midday
+						</label>
+
+						<label>
+							<input type="radio" name="time of day" value="other" /> Afternoon
+						</label>
+
+						<label>
+							<input type="radio" name="time of day" value="other" /> Evening
+						</label>
+					</div>
+
+					<div class="form-group">
+						<input type="checkbox" name="subscribe" value="yes" /> I have
+						permmisson to submit this Survey
+					</div>
+
+					<div class="button group">
+						<button type="submit">submit</button>
+						<button type="button" onclick="clearForm()">clear survey</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="order-below-wrapper margin-top">
+				<h1>Order items</h1>
+				<table class="margin-top">
+					<tr>
+						<th>item</th>
+						<th>price</th>
+						<th>quantity</th>
+					</tr>
+
+					<tr class="hover">
+						<td data-cell="item">Omega walks</td>
+						<td data-cell="price">$69</td>
+						<td data-cell="quantity">
+							<input
+								type="number"
+								id="numberInput"
+								name="numberInput"
+								min="1"
+								max="10"
+							/>
+						</td>
+					</tr>
+					<tr class="hover">
+						<td data-cell="item">Addidas</td>
+						<td data-cell="price">$109</td>
+						<td data-cell="quantity">
+							<input
+								type="number"
+								id="numberInput"
+								name="numberInput"
+								min="1"
+								max="10"
+							/>
+						</td>
+					</tr>
+
+					<tr class="hover">
+						<td data-cell="item">puma</td>
+						<td data-cell="price">$69</td>
+						<td data-cell="quantity">
+							<input
+								type="number"
+								id="numberInput"
+								name="numberInput"
+								min="1"
+								max="10"
+							/>
+						</td>
+					</tr>
+
+					<tr class="hover">
+						<td data-cell="item">Omega walks</td>
+						<td data-cell="price">$59</td>
+						<td data-cell="quantity">
+							<input
+								type="number"
+								id="numberInput"
+								name="numberInput"
+								min="1"
+								max="10"
+							/>
+						</td>
+					</tr>
+
+					<tr class="hover">
+						<td data-cell="item">Omega walks hike</td>
+						<td data-cell="price">$29</td>
+						<td data-cell="quantity">
+							<input
+								type="number"
+								id="numberInput"
+								name="numberInput"
+								min="1"
+								max="10"
+							/>
+						</td>
+					</tr>
+
+					<tr class="hover">
+						<td data-cell="item">All outing shoe</td>
+						<td data-cell="price">$60</td>
+						<td data-cell="quantity">
+							<input
+								type="number"
+								id="numberInput"
+								name="numberInput"
+								min="1"
+								max="10"
+							/>
+						</td>
+					</tr>
+
+					<tr class="hover">
+						<td data-cell="item">Holks men adidas</td>
+						<td data-cell="price">$59</td>
+						<td data-cell="quantity">
+							<input
+								type="number"
+								id="numberInput"
+								name="numberInput"
+								min="1"
+								max="10"
+							/>
+						</td>
+					</tr>
+
+					<tr>
+						<td data-cell="length" colspan="2">Total</td>
+						<td data-cell="width size B or C">
+              <button type="submit">place order</button>
+            </td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script>
+			function clearForm() {
+				document.getElementById("myForm").reset();
+			}
+		</script>
+	</body>
+</html>
